@@ -9,6 +9,9 @@
 /*------------
     TYPO
 ------------*/
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .card h3 {
     text-transform: uppercase;
     color: white;
@@ -21,7 +24,7 @@
     HEADER
 ------------*/
 .header {
-    background-color: var(--primary-color);
+    background-color: #2e3a46;;
     padding: .625rem 1.25rem;
     font-size: 0;
     display: flex;
@@ -46,11 +49,14 @@ label {
     MAIN
 ------------*/
 .main {
-    background-color: var(--secondary-color);
+    background-color: #1e2d3b;;
     min-height: calc(100vh - 3.875rem);
 }
+/*------------
+    CARD
+------------*/
 .card {
-    background-color: var(--primary-color);
+    background-color: #2e3a46;;
     text-align: center;
     color: #758080;
     padding: 1.25rem;
