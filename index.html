@@ -15,7 +15,34 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    
+    <div id="app">
+        <header class="header">
+            <img src="./img/spotify-logo.png" alt="Logo Spotify" class="header_logo">
+            <form action="index.html" method="post">
+                <label for="genre">Seleziona un genere</label>
+                <select id="genre" name="genre">
+                    <option value>Tutti i generi</option>
+                    <option :value="genre" v-for="(genre) in takeAllGenre">{{genre}}</option>
+                </select>
+            </form>
+        </header>
+        <main class="main">
+            <section class="container_main">
+                <div class="row_main">
+                        <div class="card col_main" v-for="(album) in albums">
+                            <div class="card_img">
+                                <img :src="album.poster" :alt="album.title">
+                            </div>
+                            <div class="card_detail">
+                                <h3>{{album.title}}</h3>
+                                <h4>{{album.author}}</h4>
+                                <h4>{{album.year}}</h4>
+                            </div>
+                        </div>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="./main.js"></script>
 </body>
 </html>
